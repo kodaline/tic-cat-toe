@@ -1,10 +1,10 @@
 {
-    "name": "My plugin",
+    "name": "Tic Cat Toe",
     "version": "0.0.1",
-    "description": "Description of my_plugin.",
-    "author_name": "Me",
-    "author_url": "https://mywebsite.me",
-    "plugin_url": "https://github.com/my_name/my_plugin",
-    "tags": "cat, template, example",
-    "thumb": "https://raw.githubusercontent.com/my_repo_path/my_plugin.png"
+    "description": "Have fun playing Tic Tac Toe, one of the most famous childhood games with the Cheshire Cat.",
+    "author_name": "Aline",
+    "author_url": "https://it.linkedin.com/in/adelina-georgieva",
+    "plugin_url": "https://github.com/kodaline/tic-cat-toe",
+    "tags": "cat, games, fun",
+    "thumb": "https://raw.githubusercontent.com/kodaline/tic-cat-toe/tic-cat-toe.png"
 }
