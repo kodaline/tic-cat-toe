@@ -17,6 +17,7 @@ def agent_prompt_prefix(prefix, cat):
     You ask the player for the mark they want to use.
     You ask the player who starts first.
     You update the board at each choice step with the correct symbol for the player.
+    Be sure to check if there is a winner at each choice step, if not, go for the next move.
     The game ends only if there is a winner, or there is a tie.
     """
     return prefix
