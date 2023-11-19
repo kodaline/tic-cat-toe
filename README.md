@@ -8,3 +8,16 @@ The Cheshire cat is here to make those times just a memory! Play one of the most
 1. Install the plugin and
 2. have fun!
 
+## Notes
+
+The plugin is to be used just to play tic-tac-toe with the Cat, so, it starts with something like:
+```
+Let's play tic tac toe!
+```
+
+When the cat asks you which mark you want to use, "X" or "O", you need to use capital letter, since the code needs to set
+the player's signs, and currently it is hardcoded that way :D
+
+When the cat asks you who wanna be start, you need to answer with something that contains "me" or "you" :D
+
+I know, it's bleah but the main reason behind this plugin was to play with the hooks!

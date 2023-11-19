@@ -3,15 +3,11 @@ from cat.log import log
 
 marks = ['X', 'O']
 player_mark_dict = {}
-global game_started
-global current_turn
-global winner
 winner = None
 current_turn = ""
 game_started = False
 board = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 remaining_tiles = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-global first_move
 first_move = ""
 @hook
 def agent_prompt_prefix(prefix, cat):
@@ -31,6 +27,10 @@ def before_cat_sends_message(final_output, cat):
     global current_turn
     global first_move
     global winner
+    global board
+    global remaining_tiles
+    global player_mark_dict
+
     log.error("--------------")
     log.error(final_output["content"])
     log.error("--------------")
@@ -54,13 +54,13 @@ def before_cat_sends_message(final_output, cat):
     if len(remaining_tiles) == 0 or winner:
         final_output["content"] += f"\n{and_the_winner_is()}"
         #reset game
-        #winner = None
-        #game_started = False
-        #current_turn = ""
-        #first_move = ""
-        #player_mark_dict = {}
-        #board = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-        #remaining_tiles = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        winner = None
+        game_started = False
+        current_turn = ""
+        first_move = ""
+        player_mark_dict = {}
+        board = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        remaining_tiles = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
     log.error("----------before_cat_sends_message------------")
     log.error(board)
@@ -123,11 +123,16 @@ def agent_prompt_suffix(suffix, cat):
 
 Remaining tiles: {remaining_tiles} the only possible tiles to choose on the board.
 Use remaining tiles to choose your placing, but never talk about it.
-Example of your answer can be: I choose 7.
+Example of your answer, when it's your turn, can be: I choose 7.
+Remember, tell your choice only if it's your turn.
 """
         if current_turn == "ai":
             suffix += f"""\n
 It's your turn!
+"""
+        if current_turn == "user":
+            suffix += f"""\n
+It's the user's turn!
 """
         suffix += """\n
 {episodic_memory}
