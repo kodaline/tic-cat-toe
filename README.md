@@ -16,8 +16,10 @@ Let's play tic tac toe!
 ```
 
 When the cat asks you which mark you want to use, "X" or "O", you need to use capital letter, since the code needs to set
-the player's signs, and currently it is hardcoded that way :D
+the player's signs, and currently it is hardcoded that way.
 
-When the cat asks you who wanna be start, you need to answer with something that contains "me" or "you" :D
+When the cat asks you who wanna start first, you need to answer with something that contains "me" or "you".
 
-I know, it's bleah but the main reason behind this plugin was to play with the hooks!
+I know, it's ugly but the main reason behind this plugin was mainly to play with the hooks and explore their power!
+
+Let the hook be with you!
