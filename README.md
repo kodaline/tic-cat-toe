@@ -23,3 +23,8 @@ When the cat asks you who wanna start first, you need to answer with something t
 I know, it's ugly but the main reason behind this plugin was mainly to play with the hooks and explore their power!
 
 Let the hook be with you!
+
+## Todos
+
+- Improve code
+- Add a game global state
