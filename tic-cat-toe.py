@@ -53,6 +53,16 @@ def before_cat_sends_message(final_output, cat):
         check_game_over()
     if len(remaining_tiles) == 0 or winner:
         final_output["content"] += f"\n{and_the_winner_is()}"
+        #reset game
+        #winner = None
+        #game_started = False
+        #current_turn = ""
+        #first_move = ""
+        #player_mark_dict = {}
+        #board = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        #remaining_tiles = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
+    log.error("----------before_cat_sends_message------------")
     log.error(board)
     log.error(game_started)
     log.error(first_move)
@@ -93,6 +103,7 @@ def before_cat_reads_message(user_message_json, cat):
                 remaining_tiles.pop(value_index)
             current_turn = "ai"
         check_game_over()
+    log.error("----------before_cat_reads_message------------")
     log.error(board)
     log.error(game_started)
     log.error(first_move)
@@ -230,3 +241,23 @@ def and_the_winner_is():
         return "It's a Tie!"
     else:
         return f"The winner is {winner_name}!"
+
+def reset_game():
+    global winner
+    winner = None
+    global game_started
+    game_started = False
+    global current_turn
+    current_turn = ""
+    global first_move
+    first_move = ""
+    player_mark_dict = {}
+    board = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    remaining_tiles = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    log.error("----------reset_game------------")
+    log.error(board)
+    log.error(game_started)
+    log.error(first_move)
+    log.error(player_mark_dict)
+    log.error(remaining_tiles)
+    log.error(winner)
