@@ -24,6 +24,11 @@ I know, it's ugly but the main reason behind this plugin was mainly to play with
 
 Let the hook be with you!
 
+## disclaimer
+
+The game starts only when marks are assigned, together with who starts the first mark placement. Once a round is finished, game status is reset, so asking for another round of tic-tac-toe brings to another match.
+It might happen that the cat forgets to ask signs/who starts first, just tell the Cat and it will manage it.
+
 ## Todos
 
 - Improve code
