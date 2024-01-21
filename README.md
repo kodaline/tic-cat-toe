@@ -34,3 +34,4 @@ It might happen that the cat forgets to ask signs/who starts first, just tell th
 - Improve code
 - Add a game global state
 - Add some checks on user input (for example, choosing a number greater than 9, not a thing in a 3x3 Tic Tac Toe game)
+- Add some settings (marks, grid? 3x3, 4x4, or 5x5)
